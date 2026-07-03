@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Te-chen's Site</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #fafafa;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    main { max-width: 480px; padding: 2rem; }
+    h1 { font-size: 1.5rem; font-weight: 400; margin-bottom: 0.5rem; }
+    p { font-size: 0.9rem; color: #888; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Te-chen's Site</h1>
+    <p>chat · cat · Katze</p>
+  </main>
+
+  <!--
+    ╔══════════════════════════════════════════════════════════╗
+    ║  Live2D 人偶切換 — 改下面 jsonPath 這一行即可           ║
+    ║                                                        ║
+    ║  haru/01 ← blog 形象（blog02 原用）   ◀ 當前使用       ║
+    ║  haru/02 ← root 形象（te-chen.github.io 原用）          ║
+    ║                                                        ║
+    ║  更多模型見 live2d-widget-report.txt                    ║
+    ╚══════════════════════════════════════════════════════════╝
+  -->
+  <script src="https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js">
+  </script>
+  <script>
+  L2Dwidget.init({
+    model: {
+      // ★ 切換人偶：改 01 或 02 即可
+      jsonPath: 'https://cdn.jsdelivr.net/npm/live2d-widget-model-haru@1.0.5/01/assets/haru01.model.json'
+    },
+    display: {
+      position: 'right',
+      width: 150,
+      height: 300
+    },
+    mobile: {
+      show: true
+    }
+  });
+  </script>
+</body>
+</html>
